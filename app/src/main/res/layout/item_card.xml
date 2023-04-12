@@ -9,52 +9,61 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        style="@style/CardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="1dp"
-        card_view:cardBackgroundColor="#03A9F4"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nome"
-        android:layout_width="68dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="16dp"
-        android:text="Nome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        card_view:layout_constraintBottom_toTopOf="@+id/cardView"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.077"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toTopOf="parent"
-        card_view:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/idade"
-        android:layout_width="69dp"
-        android:layout_height="22dp"
-        android:text="Idade"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        card_view:layout_constraintBottom_toTopOf="@+id/cardView"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.073"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/nome"
-        card_view:layout_constraintVertical_bias="0.415" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sobre"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        card_view:cardElevation="5dp"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.663"
-        card_view:layout_constraintStart_toEndOf="@+id/idade"
-        card_view:layout_constraintTop_toTopOf="parent" />
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:elevation="10dp"
+            android:background="@color/cardview_dark_background"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.142"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.21" />
+
+            <TextView
+                android:id="@+id/idade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idade"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.152"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/nome"
+                card_view:layout_constraintVertical_bias="0.555" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:text="Button"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.957"
+                card_view:layout_constraintStart_toEndOf="@+id/idade"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.769" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
